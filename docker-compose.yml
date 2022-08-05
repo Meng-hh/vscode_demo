@@ -1,0 +1,27 @@
+version: "3.0"
+services:
+  myredis:
+    image: redis:latest
+    container_name: myredis
+    ports:
+      - "6389:6379"
+    volumes: 
+      - /Users/coding_lyl/Desktop/docker/redis/conf/redis.conf:/etc/redis/redis.conf
+      - /Users/coding_lyl/Desktop/docker/redis/data:/data
+    networks:
+      - bridge_new
+    command: redis-server /etc/redis/redis.conf
+
+  demo:
+    image: vscode_project:0.0.7
+    container_name: mydemo
+    ports:
+      - "9009:9017"
+    networks:
+      - bridge_new
+    depends_on:
+      - myredis
+
+networks:
+  bridge_new:
+    driver: bridge

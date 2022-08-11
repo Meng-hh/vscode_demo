@@ -12,7 +12,7 @@ import com.example.demo.mapper.PersonMapper;
 import com.example.demo.utils.RedisUtil;
 
 @RestController
-public class BookController{
+public class PersonController {
     @Autowired
     private PersonMapper personMapper;
 

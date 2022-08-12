@@ -1,0 +1,11 @@
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/controller/PersonController.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/utils/ConnectionUtil.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/controller/SendMessageController.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/DemoApplication.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/entity/Book.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/client/BookClient.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/config/RabbitMQConfig.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/mapper/PersonMapper.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/utils/RedisUtil.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/utils/RedisConfig.java
+/Users/coding_lyl/IdeaProjects/vscode_demo/src/main/java/com/example/demo/entity/Person.java

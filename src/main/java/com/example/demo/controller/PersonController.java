@@ -1,7 +1,9 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.util.List;
 
+import com.example.demo.client.BookClient;
+import com.example.demo.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,6 +21,9 @@ public class PersonController {
     @Autowired
 	private RedisUtil redisUtil;
 
+    @Autowired
+    private BookClient bookClient;
+
     @RequestMapping("/hello")
     @ResponseBody
     public String test01(){
@@ -34,5 +39,10 @@ public class PersonController {
     public String test02(){
         // redisUtil.set("name", "zhangsan");
         return redisUtil.get("name").toString();
+    }
+
+    @RequestMapping("books")
+    public List<Book> test03(){
+        return bookClient.books();
     }
 }

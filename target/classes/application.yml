@@ -1,0 +1,32 @@
+server:
+  port: 9017
+
+
+spring:
+  redis:
+    host: myredis
+    port: 6379
+  application:
+    name: PersonService
+  datasource: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.31.41.228:3306/vscode_database?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: mynacos:8848
+
+  rabbitmq:
+    addresses: rabbitmq:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 300000
+
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+
+

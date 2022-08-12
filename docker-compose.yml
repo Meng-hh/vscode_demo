@@ -13,14 +13,60 @@ services:
     command: redis-server /etc/redis/redis.conf
 
   demo:
-    image: vscode_project:0.0.7
+    image: vscode_demo:0.1.2
     container_name: mydemo
+    build:
+      context: ./
+      dockerfile: Dockerfile
     ports:
       - "9009:9017"
     networks:
       - bridge_new
     depends_on:
       - myredis
+      - mynacos
+      - rabbitmq
+
+  mynacos:
+    image: nacos/nacos-server:2.0.3
+    container_name: mynacos
+    ports:
+      - "8848:8848"
+    networks:
+      - bridge_new
+    environment:
+      MODE: standalone
+
+
+  bookService:
+    image: book_service:0.0.9
+    container_name: bookService
+    build:
+      context: /Users/coding_lyl/IdeaProjects/BookService
+      dockerfile: Dockerfile
+    ports:
+      - "8031:8039"
+    networks:
+      - bridge_new
+    depends_on:
+      - mynacos
+      - rabbitmq
+      - demo
+
+  rabbitmq:
+    image: rabbitmq:3.10-management
+    container_name: rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - /Users/coding_lyl/Desktop/docker/rabbitmq/data:/var/lib/rabbitmq
+    environment:
+      RABBIT_DEFAULT_USER: admin
+      RABBIT_DEFAULT_PASS: admin
+
+    networks:
+      - bridge_new
 
 networks:
   bridge_new:

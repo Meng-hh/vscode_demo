@@ -1,0 +1,11 @@
+com/example/demo/entity/Book.class
+com/example/demo/utils/RedisUtil.class
+com/example/demo/entity/Person.class
+com/example/demo/utils/RedisConfig.class
+com/example/demo/client/BookClient.class
+com/example/demo/DemoApplication.class
+com/example/demo/utils/ConnectionUtil.class
+com/example/demo/controller/PersonController.class
+com/example/demo/controller/SendMessageController.class
+com/example/demo/config/RabbitMQConfig.class
+com/example/demo/mapper/PersonMapper.class

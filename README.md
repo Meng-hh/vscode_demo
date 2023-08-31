@@ -1,6 +1,5 @@
 # vscode_demo
-Springboot+Mybatis+Redis+Docker
-#####项目基本介绍######
+##项目基本介绍
   该项目是主微服务，项目本身是一个空壳。旨在搭建一套完全部署在docker容器的云服务，
   该项目衍生出的其他微服务项目以及所有技术都会部署在docker中，主要的docker构建文件在本项目中。
   
